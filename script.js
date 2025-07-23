@@ -154,60 +154,60 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mock data for films by category
     const moviesByCategory = {
         "Action": [
-            { title: "Le Dernier Combat", description: "Un agent secret doit empêcher une catastrophe mondiale en affrontant des forces obscures.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }, // Rick Astley - Never Gonna Give You Up (example)
-            { title: "Course Contre la Montre", description: "Un flic solitaire poursuit un criminel insaisissable à travers une ville sous tension.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Explosion Finale", description: "Une équipe d'élite doit désamorcer une bombe avant qu'elle ne détruise la capitale.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "L'Assaut", description: "Un commando est envoyé en mission suicide pour libérer des otages.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+4", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "Le Dernier Combat", description: "Un agent secret doit empêcher une catastrophe mondiale en affrontant des forces obscures.", imageFileName: "action1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Course Contre la Montre", description: "Un flic solitaire poursuit un criminel insaisissable à travers une ville sous tension.", imageFileName: "action2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Explosion Finale", description: "Une équipe d'élite doit désamorcer une bombe avant qu'elle ne détruise la capitale.", imageFileName: "action3.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "L'Assaut", description: "Un commando est envoyé en mission suicide pour libérer des otages.", imageFileName: "action4.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Science-Fiction": [
-            { title: "L'Odyssée Spatiale", description: "Un voyage épique à travers la galaxie pour découvrir les origines de l'humanité.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Le Dernier Humain", description: "Dans un futur dystopique, la survie de l'humanité est en jeu face à une intelligence artificielle.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Chroniques du Futur", description: "Des voyageurs temporels tentent de modifier le passé pour sauver l'avenir.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Monde Virtuel", description: "Un programmeur découvre que sa réalité n'est qu'une simulation complexe.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+4", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "L'Odyssée Spatiale", description: "Un voyage épique à travers la galaxie pour découvrir les origines de l'humanité.", imageFileName: "sf1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Le Dernier Humain", description: "Dans un futur dystopique, la survie de l'humanité est en jeu face à une intelligence artificielle.", imageFileName: "sf2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Chroniques du Futur", description: "Des voyageurs temporels tentent de modifier le passé pour sauver l'avenir.", imageFileName: "sf3.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Monde Virtuel", description: "Un programmeur découvre que sa réalité n'est qu'une simulation complexe.", imageFileName: "sf4.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Comédie": [
-            { title: "Le Grand Fiasco", description: "Une série de malentendus hilarants bouleverse la vie d'un homme ordinaire.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Vacances Imprévues", description: "Deux amis se retrouvent dans des situations loufoques lors de leurs vacances.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Mariage Explosif", description: "Un mariage tourne au chaos avec des invités plus excentriques les uns que les autres.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "Le Grand Fiasco", description: "Une série de malentendus hilarants bouleverse la vie d'un homme ordinaire.", imageFileName: "comedie1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Vacances Imprévues", description: "Deux amis se retrouvent dans des situations loufoques lors de leurs vacances.", imageFileName: "comedie2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Mariage Explosif", description: "Un mariage tourne au chaos avec des invités plus excentriques les uns que les autres.", imageFileName: "comedie3.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Drame": [
-            { title: "Les Larmes du Passé", description: "Un homme tente de reconstruire sa vie après une tragédie personnelle.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Au Nom de la Justice", description: "L'histoire poignante d'une avocate luttant pour la vérité dans un procès difficile.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Le Secret des Vignes", description: "Une saga familiale riche en émotions et en rebondissements.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "Les Larmes du Passé", description: "Un homme tente de reconstruire sa vie après une tragédie personnelle.", imageFileName: "drame1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Au Nom de la Justice", description: "L'histoire poignante d'une avocate luttant pour la vérité dans un procès difficile.", imageFileName: "drame2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Le Secret des Vignes", description: "Une saga familiale riche en émotions et en rebondissements.", imageFileName: "drame3.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Horreur": [
-            { title: "La Maison Hantée", description: "Un groupe d'amis passe la nuit dans une maison réputée hantée, avec des conséquences terrifiantes.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "L'Écho des Ténèbres", description: "Une entité maléfique traque les habitants d'un petit village isolé.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            // Film "INFECTED" avec une miniature placeholder et le lien YouTube corrigé
-            { title: "INFECTED | Full Movie (English Subtitles) | Horror", description: "Un film d'horreur intense sur une épidémie terrifiante.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=INFECTED+Poster", videoUrl: "https://www.youtube.com/embed/8LL81ehfRr8?autoplay=1" }
+            { title: "La Maison Hantée", description: "Un groupe d'amis passe la nuit dans une maison réputée hantée, avec des conséquences terrifiantes.", imageFileName: "horreur1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "L'Écho des Ténèbres", description: "Une entité maléfique traque les habitants d'un petit village isolé.", imageFileName: "horreur2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            // Film "The Nun's Curse" avec un nom de fichier d'image
+            { title: "The Nun's Curse - Full Movie in English - Horror - HD", description: "Un film d'horreur intense sur une malédiction monacale.", imageFileName: "The Nun's Curse.jpg", videoUrl: "https://www.youtube.com/embed/doSBRtKDP5s?autoplay=1" }
         ],
         "Romance": [
-            { title: "Un Amour d'Été", description: "Une rencontre inattendue pendant les vacances qui change deux vies à jamais.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Sous les Étoiles", description: "Deux âmes solitaires trouvent le réconfort et l'amour sous le ciel nocturne.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Le Serment Oublié", description: "Une femme découvre une vieille lettre d'amour qui la mène sur les traces d'un passé romantique.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            // Film "Mon étoile solaire" avec un lien YouTube standard
+            { title: "Un Amour d'Été", description: "Une rencontre inattendue pendant les vacances qui change deux vies à jamais.", imageFileName: "romance1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Sous les Étoiles", description: "Deux âmes solitaires trouvent le réconfort et l'amour sous le ciel nocturne.", imageFileName: "romance2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Le Serment Oublié", description: "Une femme découvre une vieille lettre d'amour qui la mène sur les traces d'un passé romantique.", imageFileName: "romance3.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            // Film "Mon étoile solaire" avec un nom de fichier d'image
             {
                 title: "Mon étoile solaire en streaming complet gratuit en français",
                 description: "Une histoire d'amour touchante et lumineuse qui réchauffe les cœurs.",
-                poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+4",
+                imageFileName: "mon_etoile_solaire.jpg",
                 videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" // Lien YouTube de remplacement
             }
         ],
         "Thriller": [
-            { title: "Le Piège", description: "Un homme se réveille piégé dans un endroit inconnu et doit résoudre des énigmes pour survivre.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Conspiration Silencieuse", description: "Une journaliste découvre un complot gouvernemental et sa vie est en danger.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "L'Inconnu Parfait", description: "Une femme est hantée par un inconnu qui semble tout savoir d'elle.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "Le Piège", description: "Un homme se réveille piégé dans un endroit inconnu et doit résoudre des énigmes pour survivre.", imageFileName: "thriller1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Conspiration Silencieuse", description: "Une journaliste découvre un complot gouvernemental et sa vie est en danger.", imageFileName: "thriller2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "L'Inconnu Parfait", description: "Une femme est hantée par un inconnu qui semble tout savoir d'elle.", imageFileName: "thriller3.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Animation": [
-            { title: "Le Royaume Enchanté", description: "Une jeune princesse part à l'aventure pour sauver son royaume magique.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Animation+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Robots en Folie", description: "Des robots dotés d'une conscience tentent de s'intégrer dans le monde des humains.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Animation+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "Le Royaume Enchanté", description: "Une jeune princesse part à l'aventure pour sauver son royaume magique.", imageFileName: "animation1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Robots en Folie", description: "Des robots dotés d'une conscience tentent de s'intégrer dans le monde des humains.", imageFileName: "animation2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Documentaire": [
-            { title: "Les Mystères des Abysses", description: "Une exploration fascinante des profondeurs océaniques et de ses créatures.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Doc+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Sur les Traces des Géants", description: "Un documentaire sur les animaux les plus grands de la planète et leur habitat.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Doc+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "Les Mystères des Abysses", description: "Une exploration fascinante des profondeurs océaniques et de ses créatures.", imageFileName: "doc1.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Sur les Traces des Géants", description: "Un documentaire sur les animaux les plus grands de la planète et leur habitat.", imageFileName: "doc2.jpg", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Humour": [
-            { title: "Témoin à louer Film complet VF (a mourir de rire)", description: "Une comédie hilarante où un homme loue un faux témoin pour son mariage, entraînant une série de quiproquos.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Humour+1", videoUrl: "https://www.youtube.com/embed/goY_YQxYN0Y?autoplay=1" }
+            { title: "Témoin à louer Film complet VF (a mourir de rire)", description: "Une comédie hilarante où un homme loue un faux témoin pour son mariage, entraînant une série de quiproquos.", imageFileName: "humour1.jpg", videoUrl: "https://www.youtube.com/embed/goY_YQxYN0Y?autoplay=1" }
         ]
     };
 
@@ -216,8 +216,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const movieCard = document.createElement('div');
         movieCard.classList.add('movie-card'); // Reuse existing movie-card styles
 
+        // Construire le chemin de l'image à partir du nom du fichier
+        const imagePath = movie.imageFileName ? `./images/${movie.imageFileName}` : 'https://placehold.co/300x450/1F1F1F/FFFFFF?text=Affiche+Manquante';
+
         movieCard.innerHTML = `
-            <img src="${movie.poster}" alt="Affiche ${movie.title}" class="movie-poster">
+            <img src="${imagePath}" alt="Affiche ${movie.title}" class="movie-poster">
             <h3 class="movie-title">${movie.title}</h3>
             <p class="movie-description">${movie.description}</p>
             <button class="btn btn-small watch-btn" data-title="${movie.title}" data-videourl="${movie.videoUrl}">Regarder</button>
