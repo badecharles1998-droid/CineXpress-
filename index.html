@@ -23,7 +23,7 @@
                     <li><a href="#hero" class="nav-link">Accueil</a></li>
                     <li><a href="#films-populaires" class="nav-link">Films</a></li>
                     <li><a href="#categories" class="nav-link">Catégories</a></li>
-                    <li><a href="#abonnements" class="nav-link">Abonnements</a></li> <!-- Nouveau lien -->
+                    <li><a href="#abonnements" class="nav-link">Abonnements</a></li>
                     <li><a href="#faq" class="nav-link">FAQ</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
@@ -105,15 +105,25 @@
             <div class="container">
                 <h2 class="section-title text-white">Explorez Nos Catégories</h2>
                 <div class="categories-grid">
-                    <div class="category-card">Action</div>
-                    <div class="category-card">Science-Fiction</div>
-                    <div class="category-card">Comédie</div>
-                    <div class="category-card">Drame</div>
-                    <div class="category-card">Horreur</div>
-                    <div class="category-card">Romance</div>
-                    <div class="category-card">Thriller</div>
-                    <div class="category-card">Animation</div>
-                    <div class="category-card">Documentaire</div>
+                    <div class="category-card" data-category="Action">Action</div>
+                    <div class="category-card" data-category="Science-Fiction">Science-Fiction</div>
+                    <div class="category-card" data-category="Comédie">Comédie</div>
+                    <div class="category-card" data-category="Drame">Drame</div>
+                    <div class="category-card" data-category="Horreur">Horreur</div>
+                    <div class="category-card" data-category="Romance">Romance</div>
+                    <div class="category-card" data-category="Thriller">Thriller</div>
+                    <div class="category-card" data-category="Animation">Animation</div>
+                    <div class="category-card" data-category="Documentaire">Documentaire</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nouvelle Section pour l'affichage des films par catégorie -->
+        <section id="category-films-display" class="section bg-dark-grey animate-slide-up hidden">
+            <div class="container">
+                <h2 class="section-title text-white" id="category-display-title"></h2>
+                <div class="category-movies-grid" id="category-movies-container">
+                    <!-- Les films de la catégorie sélectionnée seront insérés ici par JS -->
                 </div>
             </div>
         </section>
