@@ -178,8 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Horreur": [
             { title: "La Maison Hantée", description: "Un groupe d'amis passe la nuit dans une maison réputée hantée, avec des conséquences terrifiantes.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
             { title: "L'Écho des Ténèbres", description: "Une entité maléfique traque les habitants d'un petit village isolé.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            // Nouveau film d'horreur ajouté avec la miniature fournie
-            { title: "INFECTED | Full Movie (English Subtitles) | Horror", description: "Un film d'horreur intense sur une épidémie terrifiante.", poster: "http://googleusercontent.com/file_content/5", videoUrl: "https://www.youtube.com/embed/8LL81ehfRr8?autoplay=1" }
+            // Film "INFECTED" avec une miniature placeholder et le lien YouTube corrigé
+            { title: "INFECTED | Full Movie (English Subtitles) | Horror", description: "Un film d'horreur intense sur une épidémie terrifiante.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=INFECTED+Poster", videoUrl: "https://www.youtube.com/embed/8LL81ehfRr8?autoplay=1" }
         ],
         "Romance": [
             { title: "Un Amour d'Été", description: "Une rencontre inattendue pendant les vacances qui change deux vies à jamais.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
