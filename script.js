@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${movie.poster}" alt="Affiche ${movie.title}" class="movie-poster">
             <h3 class="movie-title">${movie.title}</h3>
             <p class="movie-description">${movie.description}</p>
-            <button class="btn btn-small">Regarder</button>
+            <button class="btn btn-small watch-btn" data-title="${movie.title}">Regarder</button>
         `;
         return movieCard;
     }
@@ -241,6 +241,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth',
                 block: 'start'
             });
+
+            // Re-attach watch button listeners after new cards are added
+            attachWatchButtonListeners();
         });
     });
+
+    // Video Modal Logic
+    const videoModal = document.getElementById('video-modal');
+    const closeModalBtn = document.querySelector('.close-modal-btn');
+    const modalVideoTitle = document.getElementById('modal-video-title');
+    const simulatedMovieTitle = document.getElementById('simulated-movie-title');
+
+    // Function to attach event listeners to all "Regarder" buttons
+    function attachWatchButtonListeners() {
+        document.querySelectorAll('.watch-btn').forEach(button => {
+            button.removeEventListener('click', handleWatchButtonClick); // Prevent duplicate listeners
+            button.addEventListener('click', handleWatchButtonClick);
+        });
+    }
+
+    // Handler for "Regarder" button clicks
+    function handleWatchButtonClick(e) {
+        const movieTitle = e.target.dataset.title;
+        modalVideoTitle.textContent = movieTitle;
+        simulatedMovieTitle.textContent = movieTitle; // Update title inside the simulated player
+        videoModal.classList.add('visible'); // Show the modal
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    }
+
+    // Close modal when close button is clicked
+    closeModalBtn.addEventListener('click', () => {
+        videoModal.classList.remove('visible'); // Hide the modal
+        document.body.style.overflow = ''; // Re-enable scrolling
+    });
+
+    // Close modal when clicking outside the content
+    videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) { // Only close if clicking on the overlay itself, not the content
+            videoModal.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Initial attachment of watch button listeners for popular movies
+    attachWatchButtonListeners();
 });

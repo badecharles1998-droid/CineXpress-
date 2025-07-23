@@ -56,42 +56,42 @@
                             <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+1" alt="Affiche Film 1" class="movie-poster">
                             <h3 class="movie-title">L'Ombre du Passé</h3>
                             <p class="movie-description">Un thriller psychologique haletant où un détective doit affronter ses propres démons pour résoudre une série de meurtres.</p>
-                            <button class="btn btn-small">Regarder</button>
+                            <button class="btn btn-small watch-btn" data-title="L'Ombre du Passé">Regarder</button>
                         </div>
                         <!-- Film Card 2 -->
                         <div class="movie-card">
                             <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+2" alt="Affiche Film 2" class="movie-poster">
                             <h3 class="movie-title">Aventure en Terre Inconnue</h3>
                             <p class="movie-description">Une épopée fantastique suivant un groupe d'explorateurs à travers des paysages mystiques et des créatures légendaires.</p>
-                            <button class="btn btn-small">Regarder</button>
+                            <button class="btn btn-small watch-btn" data-title="Aventure en Terre Inconnue">Regarder</button>
                         </div>
                         <!-- Film Card 3 -->
                         <div class="movie-card">
                             <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+3" alt="Affiche Film 3" class="movie-poster">
                             <h3 class="movie-title">Le Code du Silence</h3>
                             <p class="movie-description">Un drame intense sur un avocat qui découvre une conspiration gouvernementale et doit choisir entre sa carrière et la vérité.</p>
-                            <button class="btn btn-small">Regarder</button>
+                            <button class="btn btn-small watch-btn" data-title="Le Code du Silence">Regarder</button>
                         </div>
                         <!-- Film Card 4 -->
                         <div class="movie-card">
                             <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+4" alt="Affiche Film 4" class="movie-poster">
                             <h3 class="movie-title">Étoiles Lointaines</h3>
                             <p class="movie-description">Une romance intergalactique où deux âmes se rencontrent au-delà des confins de l'univers, défiant les lois de l'espace et du temps.</p>
-                            <button class="btn btn-small">Regarder</button>
+                            <button class="btn btn-small watch-btn" data-title="Étoiles Lointaines">Regarder</button>
                         </div>
                         <!-- Film Card 5 -->
                         <div class="movie-card">
                             <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+5" alt="Affiche Film 5" class="movie-poster">
                             <h3 class="movie-title">La Légende de l'Ancien</h3>
                             <p class="movie-description">Un film d'action épique sur un guerrier solitaire qui doit protéger un village innocent d'une armée de maraudeurs.</p>
-                            <button class="btn btn-small">Regarder</button>
+                            <button class="btn btn-small watch-btn" data-title="La Légende de l'Ancien">Regarder</button>
                         </div>
                         <!-- Film Card 6 -->
                         <div class="movie-card">
                             <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+6" alt="Affiche Film 6" class="movie-poster">
                             <h3 class="movie-title">Rêves Éveillés</h3>
                             <p class="movie-description">Un film d'animation poétique qui explore le monde des rêves et la puissance de l'imagination enfantine.</p>
-                            <button class="btn btn-small">Regarder</button>
+                            <button class="btn btn-small watch-btn" data-title="Rêves Éveillés">Regarder</button>
                         </div>
                     </div>
                     <button class="slider-btn prev-btn">&lt;</button>
@@ -142,7 +142,7 @@
                     <div class="feature-item">
                         <img src="https://placehold.co/80x80/E50914/FFFFFF?text=HD" alt="Streaming HD" class="mx-auto mb-4">
                         <h3 class="text-white text-xl font-bold mb-2">Streaming HD</h3>
-                        <p class="text-white-70">Qualité d'image et de son exceptionnelle, même en 4K.</p>
+                        <p class="text-70">Qualité d'image et de son exceptionnelle, même en 4K.</p>
                     </div>
                     <div class="feature-item">
                         <img src="https://placehold.co/80x80/E50914/FFFFFF?text=Multi" alt="Multi-plateforme" class="mx-auto mb-4">
@@ -325,6 +325,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- Video Player Modal -->
+    <div id="video-modal" class="video-modal hidden">
+        <div class="video-modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <h3 id="modal-video-title" class="modal-video-title"></h3>
+            <!-- Placeholder for video player. In a real app, this would be a <video> tag or an iframe from a video hosting service. -->
+            <div class="video-player-placeholder">
+                <p>Ceci est un lecteur vidéo simulé pour : <span id="simulated-movie-title"></span></p>
+                <p>Imaginez votre film ou série préféré ici !</p>
+                <img src="https://placehold.co/640x360/000000/E50914?text=LECTEUR+VIDEO+SIMULE" alt="Lecteur vidéo simulé" class="simulated-video-img">
+            </div>
+        </div>
+    </div>
 
     <!-- Fichier JavaScript -->
     <script src="script.js"></script>
