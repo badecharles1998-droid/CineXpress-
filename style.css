@@ -1,0 +1,915 @@
+/* Variables de couleurs */
+:root {
+    --color-black: #000000;
+    --color-dark-grey: #1F1F1F;
+    --color-red-netflix: #E50914;
+    --color-white: #FFFFFF;
+    --color-white-70: rgba(255, 255, 255, 0.7);
+}
+
+/* Styles globaux et réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Active le défilement fluide pour les ancres */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.6;
+    overflow-x: hidden; /* Empêche le défilement horizontal indésirable */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utilitaires Flexbox */
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-4 {
+    gap: 1rem; /* 16px */
+}
+
+.gap-8 {
+    gap: 2rem; /* 32px */
+}
+
+.gap-12 {
+    gap: 3rem; /* 48px */
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: var(--color-black);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.header.sticky {
+    padding: 0.75rem 0;
+    background-color: rgba(0, 0, 0, 0.95); /* Légèrement transparent quand sticky */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-red-netflix);
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--color-white);
+}
+
+.main-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-red-netflix);
+    transition: width 0.3s ease-in-out;
+}
+
+.main-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-red-netflix);
+    color: var(--color-white);
+    margin-right: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #c10811; /* Rouge légèrement plus foncé */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    background-color: var(--color-red-netflix);
+    color: var(--color-white);
+    border-radius: 3px;
+}
+
+.btn-small:hover {
+    background-color: #c10811;
+}
+
+/* Sections générales */
+.section {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--color-white);
+}
+
+.bg-black {
+    background-color: var(--color-black);
+}
+
+.bg-dark-grey {
+    background-color: var(--color-dark-grey);
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+.text-white-70 {
+    color: var(--color-white-70);
+}
+
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; } /* Added */
+.mt-12 { margin-top: 3rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-2xl { max-width: 42rem; } /* 672px */
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.text-center { text-align: center; }
+.text-xl { font-size: 1.25rem; } /* 20px */
+.text-2xl { font-size: 1.5rem; } /* 24px */
+.font-bold { font-weight: 700; }
+.hover\:text-red-netflix:hover { color: var(--color-red-netflix); }
+.hidden { display: none; } /* Added for order summary */
+
+/* Section Hero */
+.hero-section {
+    height: 100vh;
+    background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=CineXpress+Hero+Image'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden; /* Important for parallax */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Overlay sombre */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-white-70);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Section Films Populaires (Slider) */
+.slider-container {
+    position: relative;
+    padding: 0 20px; /* Padding for slider buttons */
+}
+
+.slider-wrapper {
+    display: flex;
+    overflow-x: scroll; /* Permet le défilement horizontal */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Améliore le défilement sur iOS */
+    padding-bottom: 20px; /* Espace pour la barre de défilement */
+    scrollbar-width: none; /* Masque la barre de défilement pour Firefox */
+    -ms-overflow-style: none; /* Masque la barre de défilement pour IE/Edge */
+}
+
+.slider-wrapper::-webkit-scrollbar {
+    display: none; /* Masque la barre de défilement pour Chrome/Safari */
+}
+
+.movie-card {
+    flex: 0 0 auto; /* Empêche les cartes de se réduire */
+    width: 280px; /* Largeur fixe pour chaque carte */
+    margin-right: 20px; /* Espacement entre les cartes */
+    background-color: var(--color-black);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 420px; /* Hauteur fixe pour l'affiche (ratio 2:3) */
+    object-fit: cover;
+    border-bottom: 2px solid var(--color-red-netflix);
+}
+
+.movie-card h3 {
+    font-size: 1.4rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+    color: var(--color-white);
+}
+
+.movie-card p {
+    font-size: 0.9rem;
+    color: var(--color-white-70);
+    margin: 0 1rem 1rem 1rem;
+    height: 60px; /* Hauteur fixe pour la description */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-card .btn-small {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem 1rem;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--color-white);
+    border: none;
+    padding: 1rem 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* Section Catégories */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background-color: var(--color-dark-grey);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-white);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.category-card:hover {
+    background-color: var(--color-red-netflix);
+    transform: translateY(-5px);
+}
+
+/* Section Zone de téléchargement */
+.download-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.feature-item {
+    flex: 0 0 calc(33% - 2rem); /* 3 items par ligne sur desktop */
+    min-width: 280px;
+    background-color: var(--color-black);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Section Abonnements */
+.subscription-plans-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.subscription-card {
+    background-color: var(--color-dark-grey);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 320px; /* Largeur fixe pour les cartes d'abonnement */
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subscription-card.featured {
+    background-color: var(--color-red-netflix);
+    border-color: var(--color-white);
+    transform: scale(1.05);
+}
+
+.subscription-card.featured .plan-name,
+.subscription-card.featured .plan-price,
+.subscription-card.featured .plan-period,
+.subscription-card.featured .plan-features li {
+    color: var(--color-white);
+}
+
+.subscription-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-red-netflix);
+}
+
+.subscription-card.featured:hover {
+    transform: scale(1.07);
+    border-color: var(--color-white);
+}
+
+.plan-name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-red-netflix);
+}
+
+.subscription-card.featured .plan-name {
+    color: var(--color-white); /* Force white for featured */
+}
+
+.plan-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.plan-price .plan-period {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-white-70);
+}
+
+.plan-features {
+    text-align: left;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Permet à la liste de prendre l'espace disponible */
+}
+
+.plan-features li {
+    font-size: 1.1rem;
+    color: var(--color-white-70);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.plan-features li::before {
+    content: '✓'; /* Checkmark */
+    color: #4CAF50; /* Green checkmark */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.plan-features li.disabled {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.plan-features li.disabled::before {
+    content: '✗'; /* Cross mark */
+    color: #F44336; /* Red cross */
+}
+
+.subscription-card .btn-subscribe {
+    width: 100%;
+    margin-right: 0; /* Override default btn-primary margin */
+}
+
+/* Order Summary and Payment Form */
+.order-summary {
+    max-width: 600px;
+    margin: 3rem auto 0 auto;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.order-details-content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.order-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 1.5rem 0;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-black);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: var(--color-white);
+    font-size: 1rem;
+    outline: none;
+}
+
+.payment-form input:focus {
+    border-color: var(--color-red-netflix);
+    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.3);
+}
+
+.payment-form .btn-primary {
+    width: 100%;
+    margin-right: 0;
+}
+
+
+/* Section FAQ */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: var(--color-black); /* Changed to black for contrast */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.faq-question {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    content: '-';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.faq-answer.active {
+    max-height: 200px; /* Hauteur max arbitraire pour l'animation */
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Section Témoignages */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: var(--color-dark-grey); /* Changed to dark-grey for contrast */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-white-70);
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--color-red-netflix);
+    text-align: right;
+}
+
+/* Section Contact */
+.contact-content {
+    align-items: flex-start; /* Align items to the top */
+}
+
+.contact-form-container, .contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+    background-color: var(--color-black); /* Changed to black for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-dark-grey); /* Changed for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: var(--color-white);
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-red-netflix);
+    box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    margin-right: 0;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-dark-grey); /* Changed for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-red-netflix);
+    transform: translateY(-3px);
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Rend les images blanches */
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 0;
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-dark-grey);
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: var(--color-white-70);
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-red-netflix);
+}
+
+/* Animations au scroll */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate-slide-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries pour le Responsive Design */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    .main-nav .nav-link {
+        margin-left: 1rem;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .subscription-card {
+        width: 280px; /* Adjust width for tablets */
+        padding: 2rem 1.5rem;
+    }
+    .plan-name {
+        font-size: 1.8rem;
+    }
+    .plan-price {
+        font-size: 2.5rem;
+    }
+    .plan-features li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .main-nav .nav-link {
+        margin: 0.5rem 0.8rem;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .btn-primary, .btn-secondary {
+        margin-right: 0;
+        width: 80%; /* Rendre les boutons plus larges sur mobile */
+        max-width: 300px;
+    }
+    .movie-card {
+        width: 250px; /* Ajuster la largeur des cartes de film */
+    }
+    .slider-btn {
+        font-size: 1.5rem;
+        padding: 0.8rem 0.6rem;
+    }
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    .feature-item {
+        flex: 0 0 calc(50% - 1.5rem); /* 2 items par ligne sur tablette */
+    }
+    .subscription-card {
+        width: 90%; /* Make cards full width on smaller screens */
+        max-width: 350px;
+    }
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-form-container, .contact-info {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .order-summary {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    .main-nav .nav-link {
+        font-size: 1rem;
+        margin: 0.3rem 0.5rem;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .movie-card {
+        width: 200px; /* Ajuster la largeur des cartes de film */
+        margin-right: 15px;
+    }
+    .movie-poster {
+        height: 300px;
+    }
+    .movie-card h3 {
+        font-size: 1.2rem;
+    }
+    .movie-card p {
+        font-size: 0.8rem;
+    }
+    .feature-item {
+        flex: 0 0 90%; /* 1 item par ligne sur mobile */
+    }
+    .faq-question {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .faq-answer {
+        font-size: 0.9rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+    .testimonial-text {
+        font-size: 1rem;
+    }
+    .plan-name {
+        font-size: 1.5rem;
+    }
+    .plan-price {
+        font-size: 2rem;
+    }
+    .plan-features li {
+        font-size: 0.9rem;
+    }
+    .order-summary {
+        padding: 1rem;
+    }
+    .order-details-content p, .order-details-content span {
+        font-size: 1rem;
+    }
+    .payment-form input {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineXpress - Regarde ce que tu veux. Quand tu veux.</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon temporaire : vous pouvez le remplacer par votre propre favicon.ico -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Google Fonts - Inter pour une typographie moderne -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header de la page -->
+    <header class="header">
+        <div class="container flex justify-between items-center">
+            <!-- Logo temporaire : icône + nom du site -->
+            <a href="#hero" class="logo">🎬 CineXpress</a>
+            <nav class="main-nav">
+                <ul class="flex">
+                    <li><a href="#hero" class="nav-link">Accueil</a></li>
+                    <li><a href="#films-populaires" class="nav-link">Films</a></li>
+                    <li><a href="#categories" class="nav-link">Catégories</a></li>
+                    <li><a href="#abonnements" class="nav-link">Abonnements</a></li> <!-- Nouveau lien -->
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero (bannière d'accueil) -->
+    <section id="hero" class="hero-section flex items-center justify-center text-center text-white">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fade-in">
+            <h1 class="hero-title">Regarde ce que tu veux. Quand tu veux.</h1>
+            <p class="hero-subtitle">Des milliers de films et séries à portée de main. Télécharge ou streame en illimité.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Créer un compte</a>
+                <a href="#films-populaires" class="btn btn-secondary">Voir les nouveautés</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Section Films Populaires / Nouveautés -->
+        <section id="films-populaires" class="section bg-dark-grey animate-slide-up">
+            <div class="container">
+                <h2 class="section-title text-white">Films Populaires & Nouveautés</h2>
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        <!-- Film Card 1 -->
+                        <div class="movie-card">
+                            <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+1" alt="Affiche Film 1" class="movie-poster">
+                            <h3 class="movie-title">L'Ombre du Passé</h3>
+                            <p class="movie-description">Un thriller psychologique haletant où un détective doit affronter ses propres démons pour résoudre une série de meurtres.</p>
+                            <button class="btn btn-small">Regarder</button>
+                        </div>
+                        <!-- Film Card 2 -->
+                        <div class="movie-card">
+                            <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+2" alt="Affiche Film 2" class="movie-poster">
+                            <h3 class="movie-title">Aventure en Terre Inconnue</h3>
+                            <p class="movie-description">Une épopée fantastique suivant un groupe d'explorateurs à travers des paysages mystiques et des créatures légendaires.</p>
+                            <button class="btn btn-small">Regarder</button>
+                        </div>
+                        <!-- Film Card 3 -->
+                        <div class="movie-card">
+                            <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+3" alt="Affiche Film 3" class="movie-poster">
+                            <h3 class="movie-title">Le Code du Silence</h3>
+                            <p class="movie-description">Un drame intense sur un avocat qui découvre une conspiration gouvernementale et doit choisir entre sa carrière et la vérité.</p>
+                            <button class="btn btn-small">Regarder</button>
+                        </div>
+                        <!-- Film Card 4 -->
+                        <div class="movie-card">
+                            <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+4" alt="Affiche Film 4" class="movie-poster">
+                            <h3 class="movie-title">Étoiles Lointaines</h3>
+                            <p class="movie-description">Une romance intergalactique où deux âmes se rencontrent au-delà des confins de l'univers, défiant les lois de l'espace et du temps.</p>
+                            <button class="btn btn-small">Regarder</button>
+                        </div>
+                        <!-- Film Card 5 -->
+                        <div class="movie-card">
+                            <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+5" alt="Affiche Film 5" class="movie-poster">
+                            <h3 class="movie-title">La Légende de l'Ancien</h3>
+                            <p class="movie-description">Un film d'action épique sur un guerrier solitaire qui doit protéger un village innocent d'une armée de maraudeurs.</p>
+                            <button class="btn btn-small">Regarder</button>
+                        </div>
+                        <!-- Film Card 6 -->
+                        <div class="movie-card">
+                            <img src="https://placehold.co/300x450/1F1F1F/FFFFFF?text=Film+6" alt="Affiche Film 6" class="movie-poster">
+                            <h3 class="movie-title">Rêves Éveillés</h3>
+                            <p class="movie-description">Un film d'animation poétique qui explore le monde des rêves et la puissance de l'imagination enfantine.</p>
+                            <button class="btn btn-small">Regarder</button>
+                        </div>
+                    </div>
+                    <button class="slider-btn prev-btn">&lt;</button>
+                    <button class="slider-btn next-btn">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Catégories -->
+        <section id="categories" class="section bg-black animate-slide-up">
+            <div class="container">
+                <h2 class="section-title text-white">Explorez Nos Catégories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">Action</div>
+                    <div class="category-card">Science-Fiction</div>
+                    <div class="category-card">Comédie</div>
+                    <div class="category-card">Drame</div>
+                    <div class="category-card">Horreur</div>
+                    <div class="category-card">Romance</div>
+                    <div class="category-card">Thriller</div>
+                    <div class="category-card">Animation</div>
+                    <div class="category-card">Documentaire</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Zone de téléchargement ou streaming -->
+        <section id="zone-telechargement" class="section bg-dark-grey animate-slide-up">
+            <div class="container text-center">
+                <h2 class="section-title text-white">Votre Cinéma, Partout.</h2>
+                <p class="text-white mb-8 max-w-2xl mx-auto">Accédez instantanément à une bibliothèque illimitée. Téléchargez vos films préférés pour les regarder hors ligne ou streamez en haute définition.</p>
+                <div class="download-features flex justify-center flex-wrap gap-8">
+                    <div class="feature-item">
+                        <img src="https://placehold.co/80x80/E50914/FFFFFF?text=DL" alt="Téléchargement" class="mx-auto mb-4">
+                        <h3 class="text-white text-xl font-bold mb-2">Téléchargement Rapide</h3>
+                        <p class="text-white-70">Téléchargez en un clic et profitez sans connexion.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://placehold.co/80x80/E50914/FFFFFF?text=HD" alt="Streaming HD" class="mx-auto mb-4">
+                        <h3 class="text-white text-xl font-bold mb-2">Streaming HD</h3>
+                        <p class="text-white-70">Qualité d'image et de son exceptionnelle, même en 4K.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://placehold.co/80x80/E50914/FFFFFF?text=Multi" alt="Multi-plateforme" class="mx-auto mb-4">
+                        <h3 class="text-white text-xl font-bold mb-2">Multi-plateforme</h3>
+                        <p class="text-white-70">Disponible sur tous vos appareils : mobile, tablette, TV.</p>
+                    </div>
+                </div>
+                <a href="#abonnements" class="btn btn-primary mt-12">Découvrir les Abonnements Premium</a>
+            </div>
+        </section>
+
+        <!-- Nouvelle Section Abonnements & Paiement -->
+        <section id="abonnements" class="section bg-black animate-slide-up">
+            <div class="container">
+                <h2 class="section-title text-white">Choisissez Votre Abonnement</h2>
+                <p class="text-white-70 mb-12 max-w-2xl mx-auto">Débloquez un accès illimité à notre catalogue avec nos formules d'abonnement flexibles. Annulez à tout moment.</p>
+
+                <div class="subscription-plans-grid flex justify-center flex-wrap gap-8">
+                    <!-- Plan Basique -->
+                    <div class="subscription-card">
+                        <h3 class="plan-name">Basique</h3>
+                        <p class="plan-price">9.99€<span class="plan-period">/mois</span></p>
+                        <ul class="plan-features">
+                            <li>Accès au catalogue standard</li>
+                            <li>Qualité SD/HD</li>
+                            <li>1 écran simultané</li>
+                            <li class="disabled">Téléchargements limités</li>
+                            <li class="disabled">Pas de 4K UHD</li>
+                        </ul>
+                        <button class="btn btn-primary btn-subscribe" data-plan="Basique" data-price="9.99">S'abonner</button>
+                    </div>
+
+                    <!-- Plan Premium (Recommandé) -->
+                    <div class="subscription-card featured">
+                        <h3 class="plan-name">Premium</h3>
+                        <p class="plan-price">15.99€<span class="plan-period">/mois</span></p>
+                        <ul class="plan-features">
+                            <li>Accès au catalogue complet</li>
+                            <li>Qualité HD/4K UHD</li>
+                            <li>4 écrans simultanés</li>
+                            <li>Téléchargements illimités</li>
+                            <li>Accès anticipé aux nouveautés</li>
+                        </ul>
+                        <button class="btn btn-primary btn-subscribe" data-plan="Premium" data-price="15.99">S'abonner</button>
+                    </div>
+
+                    <!-- Plan Ultime -->
+                    <div class="subscription-card">
+                        <h3 class="plan-name">Ultime</h3>
+                        <p class="plan-price">19.99€<span class="plan-period">/mois</span></p>
+                        <ul class="plan-features">
+                            <li>Accès au catalogue complet</li>
+                            <li>Qualité HD/4K UHD</li>
+                            <li>6 écrans simultanés</li>
+                            <li>Téléchargements illimités</li>
+                            <li>Accès anticipé aux nouveautés</li>
+                            <li>Support prioritaire 24/7</li>
+                        </ul>
+                        <button class="btn btn-primary btn-subscribe" data-plan="Ultime" data-price="19.99">S'abonner</button>
+                    </div>
+                </div>
+
+                <!-- Section Détails de la Commande et Paiement -->
+                <div id="order-summary" class="order-summary bg-dark-grey animate-slide-up mt-12 hidden">
+                    <h3 class="text-white text-2xl font-bold mb-6">Détails de Votre Commande</h3>
+                    <div class="order-details-content">
+                        <p class="text-white-70">Plan sélectionné : <span id="selected-plan" class="text-white font-bold"></span></p>
+                        <p class="text-white-70">Prix mensuel : <span id="selected-price" class="text-white font-bold"></span></p>
+                        <hr class="order-divider">
+                        <p class="text-white text-xl font-bold">Total à payer : <span id="total-price" class="text-red-netflix"></span></p>
+
+                        <form class="payment-form mt-8">
+                            <h4 class="text-white text-xl font-bold mb-4">Informations de Paiement</h4>
+                            <input type="text" placeholder="Nom sur la carte" required>
+                            <input type="text" placeholder="Numéro de carte (XXXX XXXX XXXX XXXX)" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" title="Veuillez entrer un numéro de carte valide (16 chiffres)" required>
+                            <div class="flex gap-4">
+                                <input type="text" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" title="Format MM/AA" required>
+                                <input type="text" placeholder="CVV" pattern="[0-9]{3,4}" title="3 ou 4 chiffres au dos de la carte" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-6">Procéder au Paiement</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section FAQ -->
+        <section id="faq" class="section bg-dark-grey animate-slide-up">
+            <div class="container">
+                <h2 class="section-title text-white">Questions Fréquemment Posées</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3 class="faq-question text-white">Comment puis-je créer un compte CineXpress ?</h3>
+                        <p class="faq-answer text-white-70">Cliquez sur le bouton "Créer un compte" en haut de la page ou dans la section Hero. Suivez les étapes simples pour vous inscrire et commencer à profiter de notre contenu.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question text-white">Quels types de films et séries sont disponibles ?</h3>
+                        <p class="faq-answer text-white-70">Nous proposons une vaste bibliothèque couvrant tous les genres : action, romance, comédie, science-fiction, horreur, drame, et bien plus encore. De nouvelles sorties sont ajoutées chaque semaine !</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question text-white">Puis-je télécharger des films pour les regarder hors ligne ?</h3>
+                        <p class="faq-answer text-white-70">Oui, absolument ! Nos abonnements premium vous permettent de télécharger un nombre illimité de films et séries pour les regarder quand vous le souhaitez, même sans connexion internet.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question text-white">Comment fonctionne l'abonnement premium ?</h3>
+                        <p class="faq-answer text-white-70">L'abonnement premium vous donne accès à tout notre catalogue sans publicité, en qualité HD/4K, avec des téléchargements illimités et un accès anticipé aux nouveautés. Plusieurs formules sont disponibles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Témoignages / Avis -->
+        <section id="temoignages" class="section bg-black animate-slide-up">
+            <div class="container">
+                <h2 class="section-title text-white">Ce que nos utilisateurs en disent</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"CineXpress a révolutionné ma façon de regarder des films. La qualité est incroyable et l'interface est tellement intuitive. Un must-have pour tout cinéphile !"</p>
+                        <p class="testimonial-author">- Sophie D.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Je suis toujours à la recherche de nouvelles séries, et CineXpress ne déçoit jamais. Leur sélection est vaste et les nouveautés sont toujours au rendez-vous. Excellent service client aussi !"</p>
+                        <p class="testimonial-author">- Marc L.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Enfin une plateforme qui comprend mes besoins ! Le téléchargement hors ligne est un game changer pour mes voyages. CineXpress, c'est l'avenir du divertissement."</p>
+                        <p class="testimonial-author">- Fatou B.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact / Support -->
+        <section id="contact" class="section bg-dark-grey animate-slide-up">
+            <div class="container">
+                <h2 class="section-title text-white">Contactez-nous</h2>
+                <div class="contact-content flex flex-wrap justify-center gap-12">
+                    <div class="contact-form-container">
+                        <h3 class="text-white text-2xl font-bold mb-6">Envoyez-nous un message</h3>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Votre Nom" required>
+                            <input type="email" placeholder="Votre Email" required>
+                            <textarea placeholder="Votre Message" rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="text-white text-2xl font-bold mb-6">Informations de contact</h3>
+                        <p class="text-white-70 mb-4">
+                            <strong class="text-white">Email :</strong> support@cinexpress.com
+                        </p>
+                        <p class="text-white-70 mb-4">
+                            <strong class="text-white">Téléphone :</strong> +33 1 23 45 67 89
+                        </p>
+                        <div class="social-links flex gap-4 mt-6">
+                            <a href="https://wa.me/votre_numero" target="_blank" class="social-icon">
+                                <img src="https://placehold.co/40x40/E50914/FFFFFF?text=WA" alt="WhatsApp">
+                            </a>
+                            <a href="https://instagram.com/cinexpress" target="_blank" class="social-icon">
+                                <img src="https://placehold.co/40x40/E50914/FFFFFF?text=IG" alt="Instagram">
+                            </a>
+                            <a href="https://facebook.com/cinexpress" target="_blank" class="social-icon">
+                                <img src="https://placehold.co/40x40/E50914/FFFFFF?text=FB" alt="Facebook">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer de la page -->
+    <footer class="footer bg-black text-white text-center py-8">
+        <div class="container">
+            <p>&copy; 2024 CineXpress. Tous droits réservés.</p>
+            <div class="footer-links mt-4">
+                <a href="#" class="text-white-70 hover:text-red-netflix mx-2">Conditions d'utilisation</a>
+                <span class="text-white-70">|</span>
+                <a href="#" class="text-white-70 hover:text-red-netflix mx-2">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fichier JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
