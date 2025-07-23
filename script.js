@@ -154,48 +154,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mock data for films by category
     const moviesByCategory = {
         "Action": [
-            { title: "Le Dernier Combat", description: "Un agent secret doit empêcher une catastrophe mondiale en affrontant des forces obscures.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+1" },
-            { title: "Course Contre la Montre", description: "Un flic solitaire poursuit un criminel insaisissable à travers une ville sous tension.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+2" },
-            { title: "Explosion Finale", description: "Une équipe d'élite doit désamorcer une bombe avant qu'elle ne détruise la capitale.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+3" },
-            { title: "L'Assaut", description: "Un commando est envoyé en mission suicide pour libérer des otages.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+4" }
+            { title: "Le Dernier Combat", description: "Un agent secret doit empêcher une catastrophe mondiale en affrontant des forces obscures.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }, // Rick Astley - Never Gonna Give You Up (example)
+            { title: "Course Contre la Montre", description: "Un flic solitaire poursuit un criminel insaisissable à travers une ville sous tension.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Explosion Finale", description: "Une équipe d'élite doit désamorcer une bombe avant qu'elle ne détruise la capitale.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "L'Assaut", description: "Un commando est envoyé en mission suicide pour libérer des otages.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Action+4", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Science-Fiction": [
-            { title: "L'Odyssée Spatiale", description: "Un voyage épique à travers la galaxie pour découvrir les origines de l'humanité.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+1" },
-            { title: "Le Dernier Humain", description: "Dans un futur dystopique, la survie de l'humanité est en jeu face à une intelligence artificielle.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+2" },
-            { title: "Chroniques du Futur", description: "Des voyageurs temporels tentent de modifier le passé pour sauver l'avenir.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+3" },
-            { title: "Monde Virtuel", description: "Un programmeur découvre que sa réalité n'est qu'une simulation complexe.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+4" }
+            { title: "L'Odyssée Spatiale", description: "Un voyage épique à travers la galaxie pour découvrir les origines de l'humanité.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Le Dernier Humain", description: "Dans un futur dystopique, la survie de l'humanité est en jeu face à une intelligence artificielle.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Chroniques du Futur", description: "Des voyageurs temporels tentent de modifier le passé pour sauver l'avenir.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Monde Virtuel", description: "Un programmeur découvre que sa réalité n'est qu'une simulation complexe.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=SF+4", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Comédie": [
-            { title: "Le Grand Fiasco", description: "Une série de malentendus hilarants bouleverse la vie d'un homme ordinaire.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+1" },
-            { title: "Vacances Imprévues", description: "Deux amis se retrouvent dans des situations loufoques lors de leurs vacances.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+2" },
-            { title: "Mariage Explosif", description: "Un mariage tourne au chaos avec des invités plus excentriques les uns que les autres.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+3" }
+            { title: "Le Grand Fiasco", description: "Une série de malentendus hilarants bouleverse la vie d'un homme ordinaire.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Vacances Imprévues", description: "Deux amis se retrouvent dans des situations loufoques lors de leurs vacances.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Mariage Explosif", description: "Un mariage tourne au chaos avec des invités plus excentriques les uns que les autres.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Comédie+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Drame": [
-            { title: "Les Larmes du Passé", description: "Un homme tente de reconstruire sa vie après une tragédie personnelle.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+1" },
-            { title: "Au Nom de la Justice", description: "L'histoire poignante d'une avocate luttant pour la vérité dans un procès difficile.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+2" },
-            { title: "Le Secret des Vignes", description: "Une saga familiale riche en émotions et en rebondissements.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+3" }
+            { title: "Les Larmes du Passé", description: "Un homme tente de reconstruire sa vie après une tragédie personnelle.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Au Nom de la Justice", description: "L'histoire poignante d'une avocate luttant pour la vérité dans un procès difficile.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Le Secret des Vignes", description: "Une saga familiale riche en émotions et en rebondissements.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Drame+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Horreur": [
-            { title: "La Maison Hantée", description: "Un groupe d'amis passe la nuit dans une maison réputée hantée, avec des conséquences terrifiantes.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+1" },
-            { title: "L'Écho des Ténèbres", description: "Une entité maléfique traque les habitants d'un petit village isolé.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+2" }
+            { title: "La Maison Hantée", description: "Un groupe d'amis passe la nuit dans une maison réputée hantée, avec des conséquences terrifiantes.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "L'Écho des Ténèbres", description: "Une entité maléfique traque les habitants d'un petit village isolé.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Romance": [
-            { title: "Un Amour d'Été", description: "Une rencontre inattendue pendant les vacances qui change deux vies à jamais.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+1" },
-            { title: "Sous les Étoiles", description: "Deux âmes solitaires trouvent le réconfort et l'amour sous le ciel nocturne.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+2" },
-            { title: "Le Serment Oublié", description: "Une femme découvre une vieille lettre d'amour qui la mène sur les traces d'un passé romantique.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+3" }
+            { title: "Un Amour d'Été", description: "Une rencontre inattendue pendant les vacances qui change deux vies à jamais.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Sous les Étoiles", description: "Deux âmes solitaires trouvent le réconfort et l'amour sous le ciel nocturne.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Le Serment Oublié", description: "Une femme découvre une vieille lettre d'amour qui la mène sur les traces d'un passé romantique.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Thriller": [
-            { title: "Le Piège", description: "Un homme se réveille piégé dans un endroit inconnu et doit résoudre des énigmes pour survivre.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+1" },
-            { title: "Conspiration Silencieuse", description: "Une journaliste découvre un complot gouvernemental et sa vie est en danger.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+2" },
-            { title: "L'Inconnu Parfait", description: "Une femme est hantée par un inconnu qui semble tout savoir d'elle.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+3" }
+            { title: "Le Piège", description: "Un homme se réveille piégé dans un endroit inconnu et doit résoudre des énigmes pour survivre.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Conspiration Silencieuse", description: "Une journaliste découvre un complot gouvernemental et sa vie est en danger.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "L'Inconnu Parfait", description: "Une femme est hantée par un inconnu qui semble tout savoir d'elle.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Animation": [
-            { title: "Le Royaume Enchanté", description: "Une jeune princesse part à l'aventure pour sauver son royaume magique.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Animation+1" },
-            { title: "Robots en Folie", description: "Des robots dotés d'une conscience tentent de s'intégrer dans le monde des humains.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Animation+2" }
+            { title: "Le Royaume Enchanté", description: "Une jeune princesse part à l'aventure pour sauver son royaume magique.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Animation+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Robots en Folie", description: "Des robots dotés d'une conscience tentent de s'intégrer dans le monde des humains.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Animation+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
         "Documentaire": [
-            { title: "Les Mystères des Abysses", description: "Une exploration fascinante des profondeurs océaniques et de ses créatures.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Doc+1" },
-            { title: "Sur les Traces des Géants", description: "Un documentaire sur les animaux les plus grands de la planète et leur habitat.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Doc+2" }
+            { title: "Les Mystères des Abysses", description: "Une exploration fascinante des profondeurs océaniques et de ses créatures.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Doc+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            { title: "Sur les Traces des Géants", description: "Un documentaire sur les animaux les plus grands de la planète et leur habitat.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Doc+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+        ],
+        "Humour": [ // Nouvelle catégorie "Humour"
+            { title: "Témoin à louer Film complet VF (a mourir de rire)", description: "Une comédie hilarante où un homme loue un faux témoin pour son mariage, entraînant une série de quiproquos.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Humour+1", videoUrl: "https://www.youtube.com/embed/goY_YQxYN0Y?autoplay=1" }
         ]
     };
 
@@ -208,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${movie.poster}" alt="Affiche ${movie.title}" class="movie-poster">
             <h3 class="movie-title">${movie.title}</h3>
             <p class="movie-description">${movie.description}</p>
-            <button class="btn btn-small watch-btn" data-title="${movie.title}">Regarder</button>
+            <button class="btn btn-small watch-btn" data-title="${movie.title}" data-videourl="${movie.videoUrl}">Regarder</button>
         `;
         return movieCard;
     }
@@ -251,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoModal = document.getElementById('video-modal');
     const closeModalBtn = document.querySelector('.close-modal-btn');
     const modalVideoTitle = document.getElementById('modal-video-title');
-    const simulatedMovieTitle = document.getElementById('simulated-movie-title');
+    const videoPlayerPlaceholder = document.querySelector('.video-player-placeholder'); // Get the placeholder div
 
     // Function to attach event listeners to all "Regarder" buttons
     function attachWatchButtonListeners() {
@@ -264,8 +267,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handler for "Regarder" button clicks
     function handleWatchButtonClick(e) {
         const movieTitle = e.target.dataset.title;
+        const videoUrl = e.target.dataset.videourl; // Get the video URL from data-videourl
+
         modalVideoTitle.textContent = movieTitle;
-        simulatedMovieTitle.textContent = movieTitle; // Update title inside the simulated player
+
+        // Clear previous content in the placeholder
+        videoPlayerPlaceholder.innerHTML = '';
+
+        if (videoUrl) {
+            // Create an iframe for the video
+            const iframe = document.createElement('iframe');
+            iframe.src = videoUrl;
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.classList.add('simulated-video-img'); // Reuse the styling for responsiveness
+            videoPlayerPlaceholder.appendChild(iframe);
+        } else {
+            // Fallback to placeholder image if no video URL is provided
+            videoPlayerPlaceholder.innerHTML = `
+                <p>Ceci est un lecteur vidéo simulé pour : <span id="simulated-movie-title">${movieTitle}</span></p>
+                <p>Imaginez votre film ou série préféré ici !</p>
+                <img src="https://placehold.co/640x360/000000/E50914?text=LECTEUR+VIDEO+SIMULE" alt="Lecteur vidéo simulé" class="simulated-video-img">
+            `;
+        }
+
         videoModal.classList.add('visible'); // Show the modal
         document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
     }
@@ -274,6 +300,8 @@ document.addEventListener('DOMContentLoaded', () => {
     closeModalBtn.addEventListener('click', () => {
         videoModal.classList.remove('visible'); // Hide the modal
         document.body.style.overflow = ''; // Re-enable scrolling
+        // Stop the video when modal is closed (important for iframes)
+        videoPlayerPlaceholder.innerHTML = ''; // Clear iframe content
     });
 
     // Close modal when clicking outside the content
@@ -281,6 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === videoModal) { // Only close if clicking on the overlay itself, not the content
             videoModal.classList.remove('visible');
             document.body.style.overflow = '';
+            // Stop the video when modal is closed
+            videoPlayerPlaceholder.innerHTML = ''; // Clear iframe content
         }
     });
 
