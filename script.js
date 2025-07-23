@@ -177,12 +177,21 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         "Horreur": [
             { title: "La Maison Hantée", description: "Un groupe d'amis passe la nuit dans une maison réputée hantée, avec des conséquences terrifiantes.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "L'Écho des Ténèbres", description: "Une entité maléfique traque les habitants d'un petit village isolé.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "L'Écho des Ténèbres", description: "Une entité maléfique traque les habitants d'un petit village isolé.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Horreur+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            // Nouveau film d'horreur ajouté avec la miniature fournie
+            { title: "INFECTED | Full Movie (English Subtitles) | Horror", description: "Un film d'horreur intense sur une épidémie terrifiante.", poster: "http://googleusercontent.com/file_content/5", videoUrl: "https://www.youtube.com/embed/8LL81ehfRr8?autoplay=1" }
         ],
         "Romance": [
             { title: "Un Amour d'Été", description: "Une rencontre inattendue pendant les vacances qui change deux vies à jamais.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
             { title: "Sous les Étoiles", description: "Deux âmes solitaires trouvent le réconfort et l'amour sous le ciel nocturne.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
-            { title: "Le Serment Oublié", description: "Une femme découvre une vieille lettre d'amour qui la mène sur les traces d'un passé romantique.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
+            { title: "Le Serment Oublié", description: "Une femme découvre une vieille lettre d'amour qui la mène sur les traces d'un passé romantique.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+3", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
+            // Film "Mon étoile solaire" avec un lien YouTube standard
+            {
+                title: "Mon étoile solaire en streaming complet gratuit en français",
+                description: "Une histoire d'amour touchante et lumineuse qui réchauffe les cœurs.",
+                poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Romance+4",
+                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" // Lien YouTube de remplacement
+            }
         ],
         "Thriller": [
             { title: "Le Piège", description: "Un homme se réveille piégé dans un endroit inconnu et doit résoudre des énigmes pour survivre.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Thriller+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
@@ -197,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { title: "Les Mystères des Abysses", description: "Une exploration fascinante des profondeurs océaniques et de ses créatures.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Doc+1", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" },
             { title: "Sur les Traces des Géants", description: "Un documentaire sur les animaux les plus grands de la planète et leur habitat.", poster: "https://placehold.co/300x450/1F1F1F/E50914?text=Doc+2", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" }
         ],
-        "Humour": [ // Nouvelle catégorie "Humour"
+        "Humour": [
             { title: "Témoin à louer Film complet VF (a mourir de rire)", description: "Une comédie hilarante où un homme loue un faux témoin pour son mariage, entraînant une série de quiproquos.", poster: "https://placehold.co/300x450/1F1F1F/FFFFFF?text=Humour+1", videoUrl: "https://www.youtube.com/embed/goY_YQxYN0Y?autoplay=1" }
         ]
     };
